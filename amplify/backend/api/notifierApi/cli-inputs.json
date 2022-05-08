@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "notifierApi",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/justinbergkamp/Desktop/notifier/amplify/backend/api/notifierApi/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
