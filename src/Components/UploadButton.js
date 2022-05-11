@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Table from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 
 function UploadButton() {
@@ -59,25 +59,30 @@ function UploadButton() {
                   onChange={handleOnChange}
               />
 
-              <button
-                  onClick={(e) => {
-                      handleOnSubmit(e);
-                  }}
-              >
+              <button onClick={(e) => { handleOnSubmit(e);  }} >
                   IMPORT CSV
               </button>
           </form>
           <br />
 
-      <Table striped="true" bordered hover variant="light"r>
+      <Table striped bordered hover>
         <thead>
-          <tr key={"header"}>
-            {headerKeys.map((key) => (
-              <th>{key}</th>
-            ))}
+          <tr>
+              <th>Name</th>
+              <th>Year</th>
+              <th>Month</th>
+              <th>Day</th>
+              <th>Profile</th>
           </tr>
         </thead>
         <tbody>
+        // {slice.map((el) => (
+        //   <tr className={styles.tableRowItems} key={el.id}>
+        //     <td className={styles.tableCell}>{el.name}</td>
+        //     <td className={styles.tableCell}>{el.capital}</td>
+        //     <td className={styles.tableCell}>{el.language}</td>
+        //   </tr>
+        // ))}
           {array.map((item) => (
             <tr key={item.id}   onClick={(e) => {logPerson(item)}}>
               {Object.values(item).map((val) => (
